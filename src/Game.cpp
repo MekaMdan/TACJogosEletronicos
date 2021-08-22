@@ -34,6 +34,8 @@ Game::Game(string title, int width, int height) {
         }else{
             IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF);
             Mix_Init(MIX_INIT_OGG);
+            Mix_OpenAudio(MIX_DEFAULT_FREQUENCY,MIX_DEFAULT_FORMAT,MIX_DEFAULT_CHANNELS,1024);
+            Mix_AllocateChannels(32);
             window = SDL_CreateWindow(
                 title.c_str(),
                 SDL_WINDOWPOS_CENTERED,

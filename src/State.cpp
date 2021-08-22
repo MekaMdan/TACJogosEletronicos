@@ -12,6 +12,7 @@ bool State::QuitRequested(){
 void State::LoadAssets(){
     bg.Open("./assets/img/ocean.jpg");
     music.Open("./assets/audio/stageState.ogg");
+    music.Play();
 }
 
 void State::Update(float dt){

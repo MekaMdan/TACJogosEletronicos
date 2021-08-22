@@ -30,7 +30,9 @@ void Music::Open(string file){
     music = Mix_LoadMUS(file.c_str());
     if(music==nullptr){
         cout << SDL_GetError() << endl;
+    }else{
     }
+    
 }
 
 bool Music::IsOpen(){

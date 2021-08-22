@@ -1,2 +1,5 @@
 # ignorar executaveis
 *.exe
+
+#ignorar objetos
+*.o

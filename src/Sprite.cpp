@@ -42,20 +42,26 @@ void Sprite::SetClip(int x, int y, int w, int h){
 }
 
 void Sprite::Render(int x, int y){
-
+    SDL_Renderer* renderer = Game::GetInstance().GetRenderer();
+    SDL_Rect* dstrect = new SDL_Rect();
+    dstrect->x=x;
+    dstrect->y=y;
+    dstrect->w=clipRect.w;
+    dstrect->h=clipRect.h;
+    SDL_RenderCopy(renderer, texture, &clipRect, dstrect);
 }
 
 int Sprite::GetWidth(){
-
+    return width;
 }
 
 int Sprite::GetHeight(){
-
+    return height;
 }
 
 bool Sprite::IsOpen(){
     if(texture!=nullptr){
         return true;
     }
-    else false;
+    else return false;
 }

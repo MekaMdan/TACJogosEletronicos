@@ -16,7 +16,7 @@ Game& Game::GetInstance(){
         // JA EXISTE
         return *instance;
     }else{
-        new Game("Jogo", WIDTH, HEIGHT);
+        new Game("Mariana Alencar - 160014522", WIDTH, HEIGHT);
         return *instance;
     }
 }
@@ -68,6 +68,7 @@ SDL_Renderer* Game::GetRenderer(){
 }
 
 void Game::Run(){
+    state->LoadAssets();
     while (!state->QuitRequested()){
         state->Update(0.0);
         state->Render();

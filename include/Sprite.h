@@ -1,3 +1,6 @@
+#ifndef SPRITE_H
+#define SPRITE_H
+
 #include "SDL.h"
 #include <string>
 
@@ -17,6 +20,8 @@ public:
 private:
     SDL_Texture* texture;
     int width;
-    int height;
+    int height;                                                
     SDL_Rect clipRect;
 };
+
+#endif

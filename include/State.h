@@ -1,3 +1,10 @@
+#ifndef STATE_H
+#define STATE_H
+
+
+#include "Sprite.h"
+#include "Music.h"
+
 class State{
 public:
     State();
@@ -10,3 +17,5 @@ private:
     Music music;
     bool quitRequested;
 };
+
+#endif

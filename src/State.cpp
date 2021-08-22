@@ -1,9 +1,8 @@
 #include "State.h"
 #include "SDL.h"
 
-State::State(){
+State::State():bg(),music(){
     quitRequested = false;
-    bg = new Sprite();
 }
 
 bool State::QuitRequested(){
@@ -11,7 +10,8 @@ bool State::QuitRequested(){
 }
 
 void State::LoadAssets(){
-
+    bg.Open("./assets/img/ocean.jpg");
+    music.Open("./assets/audio/stageState.ogg");
 }
 
 void State::Update(float dt){
@@ -21,5 +21,5 @@ void State::Update(float dt){
 }
 
 void State::Render(){
-    
+    bg.Render(0,0);
 }

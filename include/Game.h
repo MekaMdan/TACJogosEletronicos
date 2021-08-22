@@ -1,12 +1,16 @@
+#ifndef GAME_H
+#define GAME_H
+
+
 #include "SDL.h"
 #include "State.h"
 #include <string>
 
-#define WIDTH 800
+#define WIDTH 1024
 #define HEIGHT 600
 
 using namespace std;
-
+                           
 class Game {
 public:
     static Game& GetInstance();
@@ -21,3 +25,5 @@ private:
     State* state;
     static Game* instance;
 };
+
+#endif 

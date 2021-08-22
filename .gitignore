@@ -3,3 +3,6 @@
 
 #ignorar objetos
 *.o
+
+#ignorar arquivos .d
+*.d

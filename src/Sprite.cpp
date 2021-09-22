@@ -41,7 +41,7 @@ void Sprite::SetClip(int x, int y, int w, int h){
     clipRect.y=y;
 }
 
-void Sprite::Render(int x, int y){
+void Sprite::Render(){
     SDL_Renderer* renderer = Game::GetInstance().GetRenderer();
     SDL_Rect* dstrect = new SDL_Rect();
     dstrect->x=x;
@@ -64,4 +64,12 @@ bool Sprite::IsOpen(){
         return true;
     }
     else return false;
+}
+
+void Sprite::Update(float dt){
+    
+}
+
+bool Sprite::Is(string type){
+    
 }

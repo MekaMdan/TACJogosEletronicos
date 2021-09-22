@@ -20,7 +20,7 @@ void Music::Play(int times){
 }
 
 void Music::Stop(int msToStop){
-    Mix_FadeOutChannel(-1,msToStop);
+    Mix_FadeOutMusic(msToStop);
 }
 
 void Music::Open(string file){

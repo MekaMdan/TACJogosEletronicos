@@ -3,17 +3,20 @@
 
 #include "SDL.h"
 #include <string>
+#include "Component.h"
 
 using namespace std;
 
-class Sprite{
+class Sprite : public Component{
 public:
     Sprite();
     Sprite(string file);
     ~Sprite();
     void Open(string file);
     void SetClip(int x, int y, int w, int h);
-    void Render(int x, int y);
+    void Render();
+    bool Is(string type);
+    void Update(float dt);
     int GetWidth();
     int GetHeight();
     bool IsOpen();

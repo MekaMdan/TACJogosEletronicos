@@ -3,6 +3,8 @@
 #include "Face.h"
 #include "Vec2.h"
 
+#define PI 3.14
+
 State::State():bg(),music(){
     quitRequested = false;
 }
@@ -78,6 +80,7 @@ void State::LoadAssets(){
 }
 
 void State::Update(float dt){
+    Input();
     
 }
 

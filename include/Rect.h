@@ -12,6 +12,13 @@ public:
     ~Rect();
 
     bool Contains(std::list <float>);
+
+    // Operador de atribuição tem de fazer parte da classe
+    Rect& operator= (Rect& const r);
+
+    // Operadores de soma e subtração 
+    friend Rect operator+(Rect const &r1, Rect const &r2);
+    friend Rect operator-(Rect const &r1, Rect const &r2);
 };
 
 #endif

@@ -1,7 +1,9 @@
 #include "Component.h"
 #include "GameObject.h"
 
-Component::Component(GameObject& associated){
+// Inicializa associated com o valor associated passado nos parametros
+// seria igual a dizer associated(da classe) = associated(parametro)
+Component::Component(GameObject& associated) : associated(associated){
 
 }
 

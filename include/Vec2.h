@@ -8,6 +8,7 @@ public:
     Vec2();
     Vec2(float value_x, float value_y);
     ~Vec2();
+    
         
 };
 

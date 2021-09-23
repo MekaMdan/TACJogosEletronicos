@@ -6,11 +6,11 @@
 
 using namespace std;
 
-Sprite::Sprite(){
+Sprite::Sprite(GameObject& associated): Component(associated){
     texture = nullptr;
 }
 
-Sprite::Sprite(string file){
+Sprite::Sprite(GameObject& associated, string file): Component(associated){
     texture = nullptr;
     Open(file);
 }
@@ -44,8 +44,8 @@ void Sprite::SetClip(int x, int y, int w, int h){
 void Sprite::Render(){
     SDL_Renderer* renderer = Game::GetInstance().GetRenderer();
     SDL_Rect* dstrect = new SDL_Rect();
-    dstrect->x=x;
-    dstrect->y=y;
+    dstrect->x=associated.box.x;
+    dstrect->y=associated.box.y;
     dstrect->w=clipRect.w;
     dstrect->h=clipRect.h;
     SDL_RenderCopy(renderer, texture, &clipRect, dstrect);
@@ -71,5 +71,5 @@ void Sprite::Update(float dt){
 }
 
 bool Sprite::Is(string type){
-    
+    return "Sprite"==type;
 }

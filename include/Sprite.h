@@ -9,8 +9,8 @@ using namespace std;
 
 class Sprite : public Component{
 public:
-    Sprite();
-    Sprite(string file);
+    Sprite(GameObject& associated);
+    Sprite(GameObject& associated, string file);
     ~Sprite();
     void Open(string file);
     void SetClip(int x, int y, int w, int h);
